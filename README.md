@@ -1,3 +1,6 @@
+<img width="742" height="134" alt="image" src="https://github.com/user-attachments/assets/c0cef5ad-edb5-47df-bfac-3d0c87e4256e" />
+
+
 ## Local Docker Compose
 
 1. Copy the example environment file:
