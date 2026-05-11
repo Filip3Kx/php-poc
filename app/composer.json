@@ -1,0 +1,7 @@
+{
+    "name": "poc/php-docker",
+    "description": "PHP Docker PoC",
+    "require": {
+        "predis/predis": "^2.0"
+    }
+}

@@ -1,0 +1,41 @@
+replicaCount: 1
+
+image:
+  repository: poc/php-docker
+  tag: latest
+  pullPolicy: IfNotPresent
+  devTag: dev
+
+service:
+  type: ClusterIP
+  port: 80
+
+ingress:
+  enabled: true
+  annotations:
+    traefik.ingress.kubernetes.io/router.entrypoints: web
+  hosts:
+    - host: app.local
+      paths:
+        - path: /
+          pathType: Prefix
+  tls: []
+
+environment:
+  MY_CUSTOM_VAR: "Hello from Helm"
+  APP_ENV: "prod"
+  REDIS_HOST: "redis"
+  REDIS_PORT: "6379"
+  MYSQL_HOST: "mysql"
+  MYSQL_PORT: "3306"
+  MYSQL_DATABASE: "app"
+  MYSQL_USER: "appuser"
+  MYSQL_PASSWORD: "apppassword"
+
+resources: {}
+
+nodeSelector: {}
+
+tolerations: []
+
+affinity: {}

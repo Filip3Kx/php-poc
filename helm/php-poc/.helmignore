@@ -1,0 +1,9 @@
+# Common Helm ignore patterns
+*.tgz
+*.bak
+*.tmp
+*.swp
+.DS_Store
+.git
+.gitignore
+README.md
